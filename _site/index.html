@@ -1,12 +1,52 @@
----
-layout: default
-title: Home Page
-skills:
-  - title: Skill Name
-    desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
----
-
-    <section class="grid-center" id="about">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Geo|Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/main.css">
+    <title>Home Page</title>
+    <script src="https://use.fontawesome.com/ed90a0cc36.js"></script>
+  </head>
+  <body>
+    <header id="home">
+      <nav class="grid-spaceBetween mobHide">
+        <div class="logo col-2">
+          <img src="" alt="My Logo">
+        </div>
+        <div class="links col-5">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    <!-- mobile nav-->
+    <div id="container">
+    <nav class="mobShow">
+        <a href="#home" title="Home" class="toggle-mobile-menu">
+          <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+        </a>
+      </nav>
+      <nav id="mobile-navigation" class="grid-middle-center-noBottom-noGutter bg-yellow animate">
+        <a class="col-12 center toggle-mobile-menu" href="#home">
+          <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+        <a class="col-12 center" href="#home" class="toggle-mobile-menu">Home</a>
+        <a class="col-12 center" href="#home" class="toggle-mobile-menu">About</a>
+        <a class="col-12 center" href="#home" class="toggle-mobile-menu">Portfolio</a>
+        <a class="col-12 center" href="#home" class="toggle-mobile-menu">Contact</a>
+      </nav>
+    </div>
+    <!-- end of mobile -->
+      <div class="titles grid-center">
+        <h1 class="col-7">Brit Hemming</h1>
+        <h2 class="col-7">Front-End Developer</h2>
+        <h3 class="col-7"><i class="fa fa-globe" aria-hidden="true"></i> Citizen of the World</h3>
+      </div>
+    </header>
+        <section class="grid-center" id="about">
       <div class="aboutTxt col-6">
         <h2>About Me</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -15,13 +55,13 @@ skills:
     <section id="skills">
       <h2>My Skills</h2>
       <div class="grid-spaceAround">
-        {% for skill in page.skills %}
+        
         <div class="skill col-3">
           <i class="fa fa-code" aria-hidden="true"></i>
-          <h3>{{skill.title}}</h3>
-          <p>{{skill.desc}}</p>
+          <h3>Skill Name</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         </div>
-        {% endfor %}
+        
       </div>
       <div class="grid-spaceAround">
         <div class="skill col-3">
@@ -95,3 +135,26 @@ skills:
         </div>
       </div>
     </section>
+
+    <footer id="contact">
+      <h2>Get in Touch</h2>
+      <form class="grid-center" action="https://formspree.io/hello@brittanyhemming.com"
+          method="POST">
+        <label class="col-7" for="name">Name</label>
+        <input class="col-7" type="text" name="name">
+        <label class="col-7" for="email">Email</label>
+        <input class="col-7" type="email" name="_replyto">
+        <label class="col-7" for="message">Your Message</label>
+        <textarea class="col-7" name="message" rows="8" cols="80"></textarea>
+        <input class="button col-7" type="submit" value="Send">
+      </form>
+      <nav class="footerNav">
+        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      </nav>
+    </footer>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/JavaScript/scripts.js"></script>
+  </body>
+</html>
